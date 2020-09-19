@@ -1,0 +1,62 @@
+.home-card {
+  background-color: $white-color;
+  width: 100%;
+  max-width: 384px;
+  @extend .box-shadow;
+  @include borderRadius(16px);
+  padding: 32px 24px;
+  position: relative;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  //   width: 336px;
+  margin: 0px 8px;
+  background-color: $white-color;
+  border: 1px solid $grey-40;
+  //   margin: 0 auto;
+  height: 48px;
+  padding: 0px 16px;
+  @include borderRadius(8px);
+}
+.selectBox {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 215px;
+  height: 48px;
+  background-color: $white-color;
+  border: 1px solid $grey-40;
+  padding: 0px 32px 0px 16px;
+  @include borderRadius(8px);
+  overflow: hidden;
+  svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 8px;
+    cursor: pointer;
+  }
+}
+.textAndIcon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    color: $primary-color;
+    &.md-icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

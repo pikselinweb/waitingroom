@@ -1,0 +1,33 @@
+.call-title {
+  height: 50px;
+  padding: 0px;
+  text-align: center;
+  padding: 0px 16px 16px 16px;
+  position: relative;
+  small,
+  .title {
+    @extend .truncate-text;
+  }
+}
+.video-controller {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  //   width: 336px;
+  max-width: 100%;
+  margin: 0 8px;
+  margin-bottom: 16px;
+  @include borderRadius(8px);
+  background: url(/static/images/arabian.jpg);
+  background-size: cover;
+  background-position: center;
+  .video-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

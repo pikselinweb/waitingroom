@@ -1,0 +1,29 @@
+$primary-color: #3488fa;
+$secondary-color: #1de9b6;
+$warn-color: #ff5252;
+$white-color: #fff;
+// $bg-color: #e5e5e5;
+$grey-90: #222222;
+$grey-80: #818b9d;
+$grey-40: #b9c3d5;
+$grey-10: #f4f7fa;
+
+$color-array: $primary-color, $secondary-color, $warn-color, $white-color,
+  $grey-90, $grey-80, $grey-40, $grey-10;
+$color-names: primary, secondary, warn, white, dark, medium, light, soft;
+
+// SET GLOBAL CLASSES FOR COLOR, BACKGROUND AND BORDERS
+@each $color in $color-array {
+  $i: index($color-array, $color);
+
+  .#{nth($color-names,$i)}-c {
+    color: $color !important;
+  }
+
+  .#{nth($color-names,$i)}-bg {
+    background-color: $color !important;
+  }
+  .#{nth($color-names,$i)}-border {
+    border-color: $color !important;
+  }
+}

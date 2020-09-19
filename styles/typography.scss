@@ -1,0 +1,37 @@
+.title {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  padding-top: 4px;
+}
+strong,
+.bold {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+}
+p,
+span,
+a,
+.regular {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+}
+small,
+.small {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+}
+.text-center {
+  text-align: center;
+}

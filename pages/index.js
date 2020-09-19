@@ -1,65 +1,52 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import {
+  ButtonOutline,
+  ButtonFlat,
+  Card,
+  CardBox,
+  SelectBox,
+  TextAndIcon,
+} from "../components/ui";
+import { CallTitle, DateAndTime, VideoController } from "../components";
 
+import { UserIcon, ArrowDownIcon } from "../components/icons";
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+    <Card>
+      <CallTitle fullName="Abdussamed Bin Fettah Abu Salih" />
+      <DateAndTime
+        date="7 Oct, Weds"
+        time="10:15AM - 10:30AM"
+        timezone="Timezone: Europe/Amsterdam"
+      />
+      <VideoController />
+      <CardBox>
+        <TextAndIcon>
+          <UserIcon className="md-icon" />{" "}
+          <span className="truncate-text">
+            Ahmet Bin Mustafa Abu Hamza El Mağribeyn
+          </span>
+        </TextAndIcon>
+      </CardBox>
+      <br />
+      <div className="row-flex align-items-center space-beetwen">
+        <span>Camera</span>
+        <SelectBox text="Facetime HD Camera " />
+      </div>
+      <div className="row-flex align-items-center space-beetwen">
+        <span>Speaker</span>
+        <SelectBox text="Built-in Output (Headpone lorem impsum)" />
+      </div>
+      <div className="row-flex align-items-center space-beetwen">
+        <span>Microphone</span>
+        <SelectBox text="Built-in Microphone (Epsis lorem impsum)" />
+      </div>
+      <div className="row-flex align-items-center space-beetwen">
+        <span>Sound Test</span>
+        <ButtonOutline text="Play Sound" />
+      </div>
+      <div className="row-flex" style={{ marginTop: "24px" }}>
+        <ButtonFlat text="Join Call" />
+      </div>
+    </Card>
+  );
 }

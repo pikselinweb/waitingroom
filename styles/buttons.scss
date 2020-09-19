@@ -1,0 +1,66 @@
+.btn-fab {
+  width: 48px;
+  height: 48px;
+  background-color: $grey-10;
+  @include borderRadius(50%);
+  margin: 12px 6px;
+  cursor: pointer;
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+  svg {
+    color: $grey-90;
+    width: 20px;
+    height: 20px;
+  }
+}
+.btn {
+  border: 1px solid $primary-color;
+  @include borderRadius(8px);
+  height: 48px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 266px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  outline: none;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+}
+.outline-button {
+  @extend .btn;
+  color: $primary-color;
+  background-color: $white-color;
+
+  &:hover {
+    background-color: $primary-color;
+    color: $white-color;
+  }
+  &:active {
+    background-color: lighten($color: $primary-color, $amount: 15);
+    background-size: 100%;
+    transition: background 0s;
+  }
+}
+
+.flat-button {
+  @extend .btn;
+  color: $white-color;
+  background-color: $primary-color;
+  width: 100%;
+  &:hover {
+    background-color: darken($color: $primary-color, $amount: 10);
+    color: $grey-10;
+  }
+  &:active {
+    background-color: lighten($color: $primary-color, $amount: 15);
+    background-size: 100%;
+    transition: background 0s;
+  }
+}
